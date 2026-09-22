@@ -1,1 +1,1093 @@
+:root {
+    --pink: #e79ea1;
+    --pink-dark: #dd8c90;
+    --maroon: #a83a3a;
+    --maroon-dark: #8f2f2f;
+    --black: #111111;
+    --cream: #fdfafa;
 
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 10px;
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    font-size: 13px;
+
+    background: #ffffff;
+    color: #333333;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header.site-header {
+    background: #ffffff;
+
+    border-bottom: 1px solid #f0d6d7;
+
+    height: 65px;
+
+    padding: 0 10px;
+
+    text-align: center;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* Tiêu đề chính */
+header.site-header h1 {
+    margin: 0;
+
+    display: inline-block;
+
+    position: relative;
+
+    z-index: 1;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 32.5px;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    color: #8f2525;
+
+    text-shadow: none;
+
+    line-height: 1;
+
+    text-transform: none;
+}
+
+
+/* Bóng chữ phía dưới */
+header.site-header h1::after {
+    content: "EXAMPLE CAFE MENU";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 7px;
+
+    width: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 32.5px;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    color: var(--pink-dark);
+
+    opacity: 0.7;
+
+    filter: blur(1.5px);
+
+    z-index: -1;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav.main-nav {
+    background: var(--pink);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 58px;
+
+    padding: 0 16px;
+
+    flex-wrap: nowrap;
+}
+
+
+/* Phần Home + menu */
+.nav-inner {
+    display: flex;
+
+    align-items: center;
+
+    flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+.home-icon {
+    width: 22px;
+
+    height: 22px;
+
+    align-self: center;
+
+    margin-right: 0;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MENU LINKS
+   ========================================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    height: 58px;
+
+    margin-left: 22px;
+}
+
+
+/* Dấu | đầu tiên */
+.nav-links::before {
+    content: "";
+
+    display: block;
+
+    width: 2px;
+
+    height: 46px;
+
+    background: #4b3f8a;
+
+    flex-shrink: 0;
+}
+
+
+/* Các link */
+.nav-links a {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 46px;
+
+    padding: 0;
+
+    border: none;
+
+    color: #ffffff;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   KÍCH THƯỚC TỪNG Ô MENU
+   ========================================================= */
+
+.nav-links a:nth-child(1) {
+    width: 150px;
+}
+
+.nav-links a:nth-child(2) {
+    width: 240px;
+}
+
+.nav-links a:nth-child(3) {
+    width: 165px;
+}
+
+
+/* =========================================================
+   DẤU |
+   ========================================================= */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 2px;
+
+    height: 46px;
+
+    background: #4b3f8a;
+}
+
+
+/* Dấu | sau Desserts */
+.nav-links a:last-child::after {
+    display: block;
+}
+
+
+/* Hover */
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-box {
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 28px;
+
+    flex-shrink: 0;
+}
+
+
+/* Ô tìm kiếm */
+.search-box input[type="text"] {
+    width: 265px;
+
+    height: 31px;
+
+    padding: 7px 12px;
+
+    border: none;
+
+    outline: none;
+
+    background: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 0.95rem;
+
+    color: #555555;
+}
+
+
+/* Nút Go */
+.search-box button {
+    height: 31px;
+
+    min-width: 50px;
+
+    padding: 0 14px;
+
+    margin-left: 12px;
+
+    border: 1px solid #cccccc;
+
+    background: #f4f4f4;
+
+    cursor: pointer;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+.search-box button:hover {
+    background: #e6e6e6;
+}
+
+
+/* =========================================================
+   LAYOUT CHÍNH
+   ========================================================= */
+
+.page-body {
+    display: grid;
+
+    grid-template-columns:
+        210px
+        minmax(0, 1fr)
+        300px;
+
+    gap: 24px;
+
+    max-width: 1280px;
+
+    margin: 22px auto;
+
+    padding: 0 20px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR TRÁI
+   ========================================================= */
+
+.sidebar-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* Nút bên trái */
+.side-btn {
+    display: block;
+
+    background: var(--pink);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 22px;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition:
+        background 0.15s ease;
+}
+
+.side-btn:hover {
+    background: var(--maroon);
+}
+
+
+/* Ảnh sidebar */
+.sidebar-photo {
+    margin-top: 14px;
+
+    width: 210px;
+
+    height: 155px;
+
+    position: relative;
+
+    align-self: center;
+}
+
+
+/* Glow màu hồng */
+.sidebar-photo::before {
+    content: "";
+
+    position: absolute;
+
+    top: 6%;
+
+    left: -10%;
+
+    right: -10%;
+
+    bottom: -22%;
+
+    width: auto;
+
+    height: auto;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(231, 158, 161, 0.95) 0%,
+            rgba(231, 158, 161, 0.6) 45%,
+            rgba(231, 158, 161, 0) 72%
+        );
+
+    filter: blur(9px);
+
+    transform: none;
+
+    transform-origin: center;
+
+    z-index: 0;
+}
+
+
+/* Ảnh */
+.sidebar-photo img {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   STARTER / DESSERTS / INFORMATION
+   ========================================================= */
+
+.section-title {
+    background: var(--pink);
+
+    color: var(--maroon-dark);
+
+    width: 367px;
+
+    height: 30px;
+
+    margin: 0 0 14px 183px;
+
+    padding: 0 0 0 16px;
+
+    font-weight: 700;
+
+    font-size: 28px;
+
+    line-height: 30px;
+
+    letter-spacing: 15px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   DANH SÁCH MÓN
+   ========================================================= */
+
+.menu-list {
+    list-style: none;
+
+    margin: 1px 0 0;
+
+    padding-left: 31px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 18px;
+
+    line-height: 20px;
+}
+
+#starter + .menu-list {
+    margin-top: -1px;
+}
+
+
+/* Từng món */
+.menu-list li {
+    position: relative;
+
+    margin-bottom: 3px;
+}
+
+.menu-list li::before {
+    content: "";
+
+    position: absolute;
+
+    left: -10px;
+
+    top: 8px;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #000;
+}
+
+
+/* =========================================================
+   HONEY SOY CHICKEN KEBABS
+   ========================================================= */
+
+.menu-list li.highlight {
+    color: #d2691e;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* Dấu chấm đen */
+.menu-list li.highlight::marker {
+    color: transparent;
+}
+
+
+/* (V) */
+.menu-list li.highlight .veg-tag {
+    color: #d40000;
+
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+
+/* Các (v) bình thường */
+.veg-tag {
+    color: #d40000;
+
+    font-weight: 700;
+
+    font-size: 1em;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+.back-top {
+    display: block;
+
+    margin-left: -1px;
+
+    color: #d40000;
+
+    text-decoration: underline;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    line-height: 22px;
+
+    margin-top: 3px;
+
+    margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   INFORMATION
+   ========================================================= */
+
+/*
+   Information dùng cùng kích thước và
+   cùng letter-spacing với Starter / Desserts.
+*/
+
+.info-title {
+    background: var(--pink);
+
+    color: var(--maroon-dark);
+
+    width: 367px;
+
+    height: 30px;
+
+    margin: 8px 0 14px 183px;
+
+    padding: 0 0 0 16px;
+
+    font-weight: 700;
+
+    font-size: 21px;
+
+    line-height: 30px;
+
+    letter-spacing: 12px;
+
+    text-transform: uppercase;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+form.contact-form {
+    width: 683px;
+
+    margin-top: 12px;
+
+    padding-left: 11px;
+
+    display: grid;
+
+    grid-template-columns: 335px 335px;
+
+    column-gap: 12px;
+
+    row-gap: 28px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+/* Một hàng form */
+.form-row {
+    display: contents;
+}
+
+
+/* Input */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row select {
+    height: 43px;
+
+    padding: 0 9px;
+
+    border: 1px solid #999;
+
+    background: #fff;
+
+    border-radius: 3px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+}
+
+.contact-form ::placeholder {
+    color: #757575;
+}
+
+
+/* Radio */
+.radio-group {
+    font-family: "Times New Roman", serif;
+
+    font-size: 13px;
+
+    word-spacing: -2px;
+}
+
+.radio-group label {
+    display: inline;
+}
+
+.radio-group input {
+    margin: 0 1px 0 0;
+
+    width: 11px;
+
+    height: 11px;
+}
+
+.radio-group input:nth-of-type(2) {
+    margin-left: 3px;
+}
+
+
+/* Comment */
+textarea {
+    grid-column: 1 / -1;
+
+    height: 56px;
+
+    margin: 5px 6px 0 4px;
+
+    border: 1px solid #999;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    padding: 3px;
+}
+
+.contact-form textarea::placeholder {
+    color: #000;
+}
+
+
+/* =========================================================
+   SUBMIT / CANCEL
+   ========================================================= */
+
+.form-actions {
+    grid-column: 1 / -1;
+
+    margin-top: -2px;
+
+    display: flex;
+
+    gap: 3px;
+}
+
+
+/* Submit */
+.form-actions button[type="submit"] {
+    min-width: 56px;
+
+    height: 28px;
+
+    padding: 3px 8px;
+
+    border: 1px solid #b5b5b5;
+
+    border-radius: 2px;
+
+    background: #eeeeee;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Cancel */
+.form-actions button[type="reset"] {
+    min-width: 48px;
+
+    height: 25px;
+
+    padding: 3px 7px;
+
+    border: 1px solid #b5b5b5;
+
+    border-radius: 2px;
+
+    background: #eeeeee;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+/* Hover nút */
+.form-actions button:hover {
+    background: #e0e0e0;
+}
+
+
+/* =========================================================
+   RIGHT SIDEBAR - EVENTS
+   ========================================================= */
+
+.sidebar-right {
+    background: #000000;
+
+    color: #ffffff;
+
+    padding: 8px 22px 24px;
+
+    width: 100%;
+}
+
+
+/* Events */
+.sidebar-right h2 {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.75rem;
+
+    font-weight: 700;
+
+    margin: 0 0 22px;
+}
+
+
+/* Event */
+.event-block {
+    margin-bottom: 30px;
+}
+
+
+/* Tên event */
+.event-block h3 {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    margin: 0 0 13px;
+}
+
+
+/* Ảnh event */
+.event-block img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Nội dung event */
+.event-block p {
+    font-size: 0.88rem;
+
+    line-height: 1.55;
+
+    color: #dddddd;
+
+    margin: 0;
+}
+
+
+/* Read more */
+.event-block a {
+    color: #ffffff;
+
+    text-decoration: underline;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: var(--pink);
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 26px 10px;
+
+    margin-top: 30px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    font-size: 1.15rem;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+    .page-body {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-left {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+    .side-btn {
+        flex: 1 1 140px;
+
+        text-align: center;
+    }
+
+    .sidebar-photo {
+        margin: 14px auto;
+    }
+
+    .sidebar-right {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    header.site-header h1 {
+        font-size: 1.7rem;
+    }
+
+    header.site-header h1::after {
+        font-size: 1.7rem;
+
+        top: 8px;
+    }
+
+    nav.main-nav {
+        flex-wrap: wrap;
+
+        padding-bottom: 8px;
+    }
+
+    .nav-inner {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .nav-links {
+        margin-left: 12px;
+    }
+
+    .nav-links a:nth-child(1) {
+        width: 120px;
+    }
+
+    .nav-links a:nth-child(2) {
+        width: 160px;
+    }
+
+    .nav-links a:nth-child(3) {
+        width: 130px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .search-box {
+        margin-left: 0;
+
+        margin-top: 8px;
+
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .search-box input[type="text"] {
+        width: 200px;
+    }
+
+    .section-title {
+        letter-spacing: 4px;
+
+        font-size: 1.2rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
