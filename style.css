@@ -753,7 +753,7 @@ form.contact-form {
 .radio-group {
     font-family: "Times New Roman", serif;
 
-    font-size: 13px;
+    font-size: 18px;
 
     word-spacing: -2px;
 }
@@ -765,9 +765,9 @@ form.contact-form {
 .radio-group input {
     margin: 0 1px 0 0;
 
-    width: 11px;
+    width: 14px;
 
-    height: 11px;
+    height: 14px;
 }
 
 .radio-group input:nth-of-type(2) {
