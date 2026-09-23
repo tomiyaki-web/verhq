@@ -21,7 +21,6 @@ h1 {
     font-size: 32px;
     font-style: italic;
     color: rgb(158, 28, 35);
-    /* single soft shadow instead of a hard pink block so the title stays readable */
     text-shadow: 4px 4px 0px rgba(234, 150, 150, 0.7);
 }
 
