@@ -1,6 +1,4 @@
-/* =========================================================
-   RESET / BASE
-   ========================================================= */
+/* RESET / BAS*/
 * {
     box-sizing: border-box;
 }
@@ -12,9 +10,7 @@ body {
     color: #333;
 }
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* phần đầu */
 header {
     white-space: nowrap;
 }
@@ -29,9 +25,7 @@ h1 {
     text-shadow: 4px 4px 0px rgba(234, 150, 150, 0.7);
 }
 
-/* =========================================================
-   NAV BAR (STARTER / MAIN COURSES / DESSERTS / SEARCH)
-   ========================================================= */
+/* thanh tìm kiếm với mấy cái bar*/
 .A1 {
     margin: 0;
     padding: 10px 20px;
@@ -97,9 +91,7 @@ h1 {
     font-size: 12px;
 }
 
-/* =========================================================
-   MAIN LAYOUT (3 COLUMN TABLE)
-   ========================================================= */
+/*main layout */
 main table {
     width: 100%;
     table-layout: fixed;
@@ -122,9 +114,6 @@ main table {
     vertical-align: top;
 }
 
-/* =========================================================
-   LEFT SIDEBAR: drink pills + team photo
-   ========================================================= */
 .A {
     display: block;
     background-color: rgb(234, 150, 150);
@@ -149,9 +138,7 @@ main table {
     box-shadow: 5px 20px 10px pink;
 }
 
-/* =========================================================
-   CENTER: Starter / Desserts / Information
-   ========================================================= */
+/* mấy cái mục */
 .B1 {
     background-color: rgb(234, 150, 150);
     color: rgb(158, 28, 35);
@@ -196,9 +183,7 @@ u {
     text-decoration: none;
 }
 
-/* =========================================================
-   INFORMATION FORM
-   ========================================================= */
+/* INFORMATION FORM*/
 .info-form {
     margin: 10px 0 0 34px;
     font-family: Arial, sans-serif;
@@ -266,9 +251,7 @@ textarea {
     font-family: "Times New Roman", serif;
 }
 
-/* =========================================================
-   RIGHT SIDEBAR: EVENTS
-   ========================================================= */
+/* event*/
 .events {
     background-color: black;
     color: white;
@@ -314,9 +297,6 @@ textarea {
     cursor: pointer;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
 footer .footer-title {
     text-shadow: none;
     color: white;
